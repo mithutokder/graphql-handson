@@ -1,0 +1,27 @@
+input UserInput {
+    id: ID,
+    firstName: String,
+    lastName: String,
+    phoneNo: String
+}
+
+type User {
+    id: ID,
+    firstName: String,
+    lastName: String,
+    phoneNo: String,
+    roles: [Role]
+}
+
+type Role {
+    name: String
+}
+
+type Query {
+	users(param:UserInput):[User]
+}
+
+type Mutation {
+	createUser(param:UserInput): User
+	addRole(id: ID, role: String): User
+}

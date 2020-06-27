@@ -17,7 +17,7 @@ mvn spring-boot:run
 
 Use the below url to access the application
 ```shell script
-localhost:8080
+localhost:8080/graphiql
 ```
 
 # GraphQL Operations
